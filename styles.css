@@ -1,0 +1,57 @@
+
+/* styles.css - AutoPrime Veículos */
+:root{
+  --primary:#0b3d91;
+  --accent:#6c5ce7;
+  --muted:#6b7280;
+  --bg: #f8fafc;
+  --card:#ffffff;
+}
+*{box-sizing:border-box}
+html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
+body{background:linear-gradient(180deg, #f6f8ff 0%, #ffffff 100%);color:#0f172a;line-height:1.4;}
+.site-header{position:fixed;top:0;left:0;right:0;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;background:rgba(255,255,255,0.9);backdrop-filter:saturate(140%) blur(4px);box-shadow:0 2px 6px rgba(12,18,25,0.06);z-index:1000;}
+.brand{display:flex;align-items:center;gap:0.75rem}
+.logo{height:42px;width:auto;display:block}
+.brand-name{font-weight:700;color:var(--primary)}
+.main-nav{display:flex;gap:1rem;align-items:center}
+.main-nav a{color:var(--primary);text-decoration:none;font-weight:600;padding:0.5rem}
+.menu-toggle{display:none;background:none;border:0;font-size:20px}
+/* Content container with minimum 15% margins on left and right for desktop */
+.container{padding-top:96px;padding-bottom:48px;padding-left:15%;padding-right:15%;max-width:1400px;margin:0 auto}
+@media (max-width:900px){
+  .container{padding-left:8%;padding-right:8%}
+  .main-nav{display:none}
+  .menu-toggle{display:block}
+}
+h1,h2,h3{margin:0 0 0.75rem 0}
+.lead{color:var(--muted);margin-bottom:1rem}
+.hero{display:flex;gap:2rem;align-items:center;justify-content:space-between;margin-bottom:2rem}
+.hero .hero-text{flex:1}
+.hero .hero-visual{flex:1;text-align:center}
+.card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:var(--card);border-radius:8px;padding:1rem;box-shadow:0 6px 18px rgba(11,61,145,0.04)}
+.car-title{font-weight:700}
+.price{color:var(--primary);font-weight:700}
+.section{margin-bottom:1.5rem}
+.features{display:flex;flex-wrap:wrap;gap:1rem}
+.feature{background:#fff;border-radius:8px;padding:1rem;flex:1;min-width:180px;box-shadow:0 4px 12px rgba(16,24,40,0.03)}
+.filters{display:flex;gap:0.5rem;align-items:center;margin-bottom:1rem}
+.form-row{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:0.75rem}
+input,textarea,select,button{font-family:inherit}
+.form-control{padding:0.6rem;border-radius:6px;border:1px solid #e6eef8}
+.btn{background:var(--primary);color:#fff;border:0;padding:0.6rem 0.9rem;border-radius:6px;cursor:pointer;font-weight:700}
+.small{font-size:0.9rem;color:var(--muted)}
+.site-footer{border-top:1px solid #edf2f7;padding:1rem 0;margin-top:2rem;background:transparent;position:relative;z-index:10}
+.site-footer .footer-content{display:flex;justify-content:space-between;gap:1rem;align-items:center;font-size:0.9rem;color:var(--muted)}
+.map-embed{width:100%;height:300px;border:0;border-radius:8px}
+/* Responsive tweaks */
+@media (max-width:600px){
+  .container{padding-left:6%;padding-right:6%}
+  .hero{flex-direction:column;align-items:flex-start}
+  .site-header{padding:0 1rem}
+  .brand-name{display:none}
+  .site-footer .footer-content{flex-direction:column;align-items:flex-start;gap:0.25rem}
+}
+a.cta-link{color:var(--accent);font-weight:700;text-decoration:none}
+.footer-credit{font-size:0.85rem;color:var(--muted)}
